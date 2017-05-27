@@ -1,0 +1,7 @@
+node_modules/
+.idea/
+.DS_Store
+backbone-min.js
+jquery-3.2.1.min.js
+underscore-min.js
+
