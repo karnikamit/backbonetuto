@@ -5,6 +5,12 @@ var Blog = Backbone.Model.extend({
         author: '',
         title: '',
         url: ''
+    },
+
+    initialize: function(){
+        console.log("Blog is created!");
+        }
+
     }
 });
 
@@ -30,3 +36,22 @@ var blog2 = new Blog({
 // instantiate a collection
 
 var blogs = new Blogs([blog1, blog2]);
+
+// Backbone view for one blog
+
+var BlogView = Backbone.View.extend({
+    model: new Blog(),
+
+    tagName: 'tr',
+
+    initialze: function(){
+        this.template = _.template($('.blogs-template').html());
+    }
+
+});
+
+// Backbone View for all blogs
+
+var BlogsView = Backbone.View.extend({
+
+});
